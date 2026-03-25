@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/style.css">
+    <link rel='icon' type="image/x-icon" href="./assets/img/LogoCrud.png">
+    <title>Cadastro de Materiais</title>
+</head>
+<body>
+    <!-- Título e logo do projeto -->
+    <header>
+        <div class="title">
+            <img src="./assets/img/LogoCrud.png">
+            <h1>Eng.Fsa</h1>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="container-item-form">
+            <!-- Painel de bem-vindo -->
+            <div class="welcome-panel">
+                <h1>Bem-Vindo!</h1>
+                <h3>Cadastre um novo produto de um jeito simples e prático!</h3>
+                <button type="button">Entrar</button>
+            </div>
+
+            <!-- Formulário de cadastro de itens -->
+            <div class="register-panel">
+                <h1>Cadastre seu produto!</h1>
+                <form class="item-form" method="post">
+                    <div class="input-item">
+                        <input type="text" placeholder="Nome do Produto" required>
+                    </div>
+
+                    <div class="input-item">
+                        <input type="text" placeholder="Fornecedor" required>
+                    </div>
+
+                    <div class="input-item">
+                        <select name="category" id="category">
+                            <option>Categoria</option>
+                            <option value="eletronico">Material Escolar</option>
+                            <option value="material">Eletrônicos</option>
+                            <option value="educacao">Educação</option>
+                        </select>
+
+                    </div>
+
+                    <div class="input-item">
+                        <input type="number" placeholder="Preço" required>
+                    </div>
+                    
+                    <button type="submit" value="send">Cadastrar</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Tabela de itens cadastrados -->
+        <div class="item-table">
+            <h1>Tabela de Cadastro</h1>
+            <form class="search-container">
+                <input type="text" placeholder="Digite sua pesquisa...">
+                <button type="submit">Buscar</button>
+                <select name="filter" id="filter">
+                    <option>Filtro</option>
+                </select>
+            </form>
+        </div>
+
+    </div>
+</body>
+</html>
