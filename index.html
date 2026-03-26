@@ -1,73 +1,138 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/style.css">
-    <link rel='icon' type="image/x-icon" href="./assets/img/LogoCrud.png">
-    <title>Cadastro de Materiais</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cadastro de materiais</title>
+  <link rel='icon' type="image/x-icon" href="./assets/img/LogoCrud.png">
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
 </head>
 <body>
-    <!-- Título e logo do projeto -->
-    <header>
-        <div class="title">
-            <img src="./assets/img/LogoCrud.png">
-            <h1>Eng.Fsa</h1>
-        </div>
-    </header>
-
-    <div class="container">
-        <div class="container-item-form">
-            <!-- Painel de bem-vindo -->
-            <div class="welcome-panel">
-                <h1>Bem-Vindo!</h1>
-                <h3>Cadastre um novo produto de um jeito simples e prático!</h3>
-                <button type="button">Entrar</button>
-            </div>
-
-            <!-- Formulário de cadastro de itens -->
-            <div class="register-panel">
-                <h1>Cadastre seu produto!</h1>
-                <form class="item-form" method="post">
-                    <div class="input-item">
-                        <input type="text" placeholder="Nome do Produto" required>
-                    </div>
-
-                    <div class="input-item">
-                        <input type="text" placeholder="Fornecedor" required>
-                    </div>
-
-                    <div class="input-item">
-                        <select name="category" id="category">
-                            <option>Categoria</option>
-                            <option value="eletronico">Material Escolar</option>
-                            <option value="material">Eletrônicos</option>
-                            <option value="educacao">Educação</option>
-                        </select>
-
-                    </div>
-
-                    <div class="input-item">
-                        <input type="number" placeholder="Preço" required>
-                    </div>
-                    
-                    <button type="submit" value="send">Cadastrar</button>
-                </form>
-            </div>
-        </div>
-
-        <!-- Tabela de itens cadastrados -->
-        <div class="item-table">
-            <h1>Tabela de Cadastro</h1>
-            <form class="search-container">
-                <input type="text" placeholder="Digite sua pesquisa...">
-                <button type="submit">Buscar</button>
-                <select name="filter" id="filter">
-                    <option>Filtro</option>
-                </select>
-            </form>
-        </div>
-
+  <header class="topo">
+    <div class="logo-area">
+      <img src="./assets/img/LogoCrud.png" alt="Logo" class="logo" />
+      <h1>Eng.Fsa</h1>
     </div>
+  </header>
+
+  <main class="container">
+    <section class="painel-principal">
+      <div class="painel-esquerdo">
+        <div class="conteudo-esquerdo">
+          <h2>Bem-Vindo!</h2>
+          <p>Cadastre um novo produto de um jeito simples e prático!</p>
+          <button class="btn-outline">Entrar</button>
+        </div>
+      </div>
+
+      <div class="painel-direito">
+        <h2>Cadastre seu produto!</h2>
+
+        <form class="formulario">
+          <div class="campo">
+            <i class="fa-solid fa-table-cells-large"></i>
+            <input type="text" placeholder="Nome do produto" />
+          </div>
+
+          <div class="campo">
+            <i class="fa-solid fa-bars"></i>
+                <select name="category" id="category">
+                    <option value="" disabled selected>Categoria</option>
+                    <option value="eletronico">Material Escolar</option>
+                    <option value="material">Eletrônicos</option>
+                    <option value="educacao">Educação</option>
+                </select>
+          </div>
+
+          <div class="campo">
+            <i class="fa-solid fa-user"></i>
+            <input type="text" placeholder="Fornecedor" />
+          </div>
+
+          <div class="campo">
+            <i class="fa-solid fa-circle-dollar-to-slot"></i>
+            <input type="number" placeholder="Preço" />
+          </div>
+        </form>
+
+        <button class="btn-cadastrar" type="submit" value="send">Cadastrar</button>
+      </div>
+    </section>
+
+    <section class="secao-tabela">
+      <div class="titulo-tabela">
+        <h2>Tabela de Cadastro</h2>
+      </div>
+
+      <div class="barra-acoes">
+        <div class="search-box">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" placeholder="Procurar" />
+          <i class="fa-regular fa-circle-xmark limpar"></i>
+        </div>
+
+        <button class="btn-filtro">
+          <i class="fa-solid fa-filter"></i>
+          Filtro
+        </button>
+      </div>
+
+      <div class="tabela-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nome do produto</th>
+              <th>Fornecedor</th>
+              <th>Categoria</th>
+              <th>Preço</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <!-- 
+          <tbody>
+            <tr>
+              <td>01</td>
+              <td>Notebook Dell</td>
+              <td>Tech Supply</td>
+              <td>Eletrônicos</td>
+              <td>R$ 3.500,00</td>
+              <td>
+                <button class="acao editar">Editar</button>
+                <button class="acao excluir">Excluir</button>
+              </td>
+            </tr>
+            <tr>
+              <td>02</td>
+              <td>Mouse Gamer</td>
+              <td>InfoMax</td>
+              <td>Periféricos</td>
+              <td>R$ 120,00</td>
+              <td>
+                <button class="acao editar">Editar</button>
+                <button class="acao excluir">Excluir</button>
+              </td>
+            </tr>
+            <tr>
+              <td>03</td>
+              <td>Cadeira Office</td>
+              <td>Mobly Pro</td>
+              <td>Móveis</td>
+              <td>R$ 850,00</td>
+              <td>
+                <button class="acao editar">Editar</button>
+                <button class="acao excluir">Excluir</button>
+              </td>
+            </tr>
+          </tbody>
+            -->
+        </table>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
