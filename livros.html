@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cadastro de livros</title>
+  <link rel='icon' type="image/x-icon" href="./assets/img/LogoCrud.png">
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+</head>
+<body>
+  <header class="topo">
+    <div class="logo-area">
+      <img src="./assets/img/LogoCrud.png" alt="Logo" class="logo" />
+      <h1>Eng.Fsa</h1>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="painel-principal">
+      <div class="painel-esquerdo">
+        <div class="conteudo-esquerdo">
+          <h2>Bem-Vindo!</h2>
+          <p>Gerencie e organize seus livros de forma simples e eficiente.</p>
+          <button class="btn-outline">Entrar</button>
+        </div>
+      </div>
+
+      <div class="painel-direito">
+        <h2>Cadastre seu livro!</h2>
+
+        <form class="formulario">
+          <div class="campo">
+            <i class="fa-solid fa-pencil"></i>
+            <input type="text" id="nome" placeholder="Título" />
+          </div>
+
+          <div class="campo">
+            <i class="fa-regular fa-calendar"></i>
+            <input type="number" id="ano" placeholder="Ano de publicação" min="1900" max="2100" />
+          </div>
+
+          <div class="campo">
+            <i class="fa-solid fa-user"></i>
+            <input type="text" id="autor" placeholder="Autor" />
+          </div>
+
+          <div class="campo">
+            <i class="fa-solid fa-shapes"></i>
+                <select id="genero">
+                    <option value="" disabled selected>Gênero</option>
+                    <option value="ficcao">Ficção</option>
+                    <option value="aventura">Aventura</option>
+                    <option value="juvenil">Infantojuvenil</option>
+                    <option value="suspense">Suspense</option>
+                    <option value="romance">Romance</option>
+                    <option value="drama">Drama</option>
+                    <option value="tecnologia">Tecnologia</option>
+                </select>
+          </div>
+        </form>
+
+        <button class="btn-cadastrar" type="submit" value="send">Cadastrar</button>
+      </div>
+    </section>
+
+    <section class="secao-tabela">
+      <div class="titulo-tabela">
+        <h2>Sistema de Biblioteca</h2>
+      </div>
+
+      <div class="barra-acoes">
+        <div class="search-box">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" placeholder="Procurar" />
+          <i class="fa-regular fa-circle-xmark limpar"></i>
+        </div>
+
+        <button class="btn-filtro">
+          <i class="fa-solid fa-filter"></i>
+          Filtro
+        </button>
+      </div>
+
+      <div class="tabela-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Título</th>
+              <th>Autor</th>
+              <th>Ano de publicação</th>
+              <th>Gênero</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+    <!--
+        <script src="./assets/js/app.js"></>
+    -->
+</body>
+</html>

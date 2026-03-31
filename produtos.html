@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cadastro de produtos</title>
+  <link rel='icon' type="image/x-icon" href="./assets/img/LogoCrud.png">
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+</head>
+<body>
+  <header class="topo">
+    <div class="logo-area">
+      <img src="./assets/img/LogoCrud.png" alt="Logo" class="logo" />
+      <h1>Eng.Fsa</h1>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="painel-principal">
+      <div class="painel-esquerdo">
+        <div class="conteudo-esquerdo">
+          <h2>Bem-Vindo!</h2>
+          <p>Cadastre um novo produto de um jeito simples e prático!</p>
+          <button class="btn-outline">Entrar</button>
+        </div>
+      </div>
+
+      <div class="painel-direito">
+        <h2>Cadastre seu produto!</h2>
+
+        <form class="formulario">
+          <div class="campo">
+            <i class="fa-solid fa-table-cells-large"></i>
+            <input type="text" id="nome" placeholder="Nome do produto" />
+          </div>
+
+          <div class="campo">
+            <i class="fa-solid fa-bars"></i>
+                <select id="categoria">
+                    <option value="" disabled selected>Categoria</option>
+                    <option value="material">Material Escolar</option>
+                    <option value="eletronico">Eletrônicos</option>
+                    <option value="educacao">Educação</option>
+                </select>
+          </div>
+
+          <div class="campo">
+            <i class="fa-solid fa-user"></i>
+            <input type="text" id="fornecedor" placeholder="Fornecedor" />
+          </div>
+
+          <div class="campo">
+            <i class="fa-solid fa-circle-dollar-to-slot"></i>
+            <input type="number" id="preco" placeholder="Preço" step="0.01" min="0" />
+          </div>
+        </form>
+
+        <button class="btn-cadastrar" type="submit" value="send">Cadastrar</button>
+      </div>
+    </section>
+
+    <section class="secao-tabela">
+      <div class="titulo-tabela">
+        <h2>Tabela de Cadastro</h2>
+      </div>
+
+      <div class="barra-acoes">
+        <div class="search-box">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" placeholder="Procurar" />
+          <i class="fa-regular fa-circle-xmark limpar"></i>
+        </div>
+
+        <button class="btn-filtro">
+          <i class="fa-solid fa-filter"></i>
+          Filtro
+        </button>
+      </div>
+
+      <div class="tabela-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nome do produto</th>
+              <th>Fornecedor</th>
+              <th>Categoria</th>
+              <th>Preço</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+  <script src="./assets/js/app.js"></script>
+</body>
+</html>
